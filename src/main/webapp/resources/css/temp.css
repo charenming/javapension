@@ -1,0 +1,1372 @@
+@charset "utf-8";
+/*Calendar*/
+/*pc*/
+#wrap {
+  margin: 0 auto;
+}
+.appGnb {
+  display: none;
+}
+header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 999;
+  background-color: inherit;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.header.gnbBg {
+  background-color: #fff;
+}
+
+.gnb > li > a,
+.liveReservation > a {
+  color: #333;
+}
+
+.headerInner {
+  max-width: 1200px;
+  max-height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+.logo,
+.liveReservation,
+.liveReservationTab {
+  width: 200px;
+}
+.logo > a {
+}
+.logo > a > img {
+  width: 200px;
+  height: 100px;
+}
+
+.gnb,
+.gnbTab {
+  width: 800px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gnb > li {
+}
+.gnb > li > a,
+.liveReservation > a {
+  color: #fff;
+}
+
+.gnb > li > a:hover,
+.liveReservation > a:hover,
+.gnbTab > li > a:hover,
+.liveReservationTab > a > i:hover {
+  color: rgb(158, 146, 131);
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.headerGnb {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+.headerGnb > .gnb > li > a,
+.headerGnb > .liveReservation > li > a > i {
+  color: #333;
+}
+
+.gnbTab > li > a,
+.liveReservationTab > li > a > i {
+  color: #333;
+}
+
+.liveReservation > li > a > i {
+  position: relative;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.rsSubMenu {
+  position: absolute;
+  top: 80px;
+  /* right: 500px; */
+  right: 500px;
+  display: none;
+  z-index: 9999;
+}
+
+.rsSubMenu > li {
+  background-color: rgb(214, 204, 192);
+  width: 200px;
+  padding: 5px;
+  line-height: 40px;
+  text-align: center;
+}
+.rsSubMenu > li:hover {
+  background-color: rgb(245, 240, 234);
+}
+.rsSubMenu > li > a {
+  color: #333;
+}
+.rsSubMenu > li > a:hover {
+  font-weight: bold;
+}
+
+.gnb > li > a.gnbColor,
+.liveReservation > li > a > i.gnbColor {
+  color: #333;
+}
+.logoBlack {
+  display: none;
+}
+/*visual start*/
+#visual {
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-theme-color {
+  color: #fff;
+}
+
+/*visual end*/
+
+/*footer start*/
+footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.info {
+  padding: 40px 0;
+}
+.info > p {
+  line-height: 2;
+  color: #404040;
+  font-size: 18px;
+}
+.info > p > span {
+  font-weight: bolder;
+}
+.sns {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+
+.insta > a > i,
+.facebook > a > i,
+.naver > a > i {
+  font-size: 30px;
+}
+
+.hr {
+  max-width: 1200px;
+}
+
+/*footer end*/
+
+#gnb02Contents {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.gallery {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4 1fr);
+  grid-template-rows: repeat(7 1fr);
+  padding: 100px 0;
+}
+.gallery li {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 400px;
+  height: 400px;
+}
+.gallery > li:hover img {
+  transform: scale(1.2);
+  transition: transform 1s;
+  filter: brightness(70%);
+}
+
+.gallery > li > img {
+  width: 100%;
+  height: 100%;
+}
+
+.imgbox01 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.imgbox02 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.imgbox03 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.imgbox04 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.imgbox05 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.imgbox06 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+#gnb03Contents {
+  padding: 150px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* .title {
+  margin: 0 auto;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title > img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.titleTxt {
+  font-size: 30px;
+  text-align: center;
+  line-height: 2;
+  color: rgb(158, 146, 131);
+} */
+
+/* .title {
+  padding: 80px;
+} */
+.title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.title > img {
+  width: 100px;
+  height: 100px;
+}
+.titleTxt {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(158, 146, 131);
+  line-height: 1.6;
+}
+
+.serviceMenu {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3 1fr);
+  grid-template-rows: repeat(1fr 1.5fr);
+}
+.serviceMenu > li {
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.serviceMenu > li > img {
+  width: 80vw;
+  height: 80vh;
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.serviceTxtDetail > li {
+  line-height: 2;
+}
+
+.serviceImg03 {
+  background-image: url(../images/서비스/wine_white.jpg);
+}
+
+.serviceMenu > li:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  height: 300px;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.serviceMenu > li:nth-child(2n) > h2,
+.txtBold {
+  color: rgb(158, 146, 131);
+}
+.serviceMenu > li:nth-child(2n-1) {
+  height: 20vh;
+}
+
+.serviceImg01 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background: url(../images/서비스/barbeque.jpg) no-repeat 30% 100%;
+}
+.serviceTxt01 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.serviceImg02 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background: url(../images/서비스/spar.png) no-repeat 30% 50%;
+}
+
+.serviceTxt02 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.serviceImg03 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background: url(../images/서비스/wine_white.jpg) no-repeat 50% 40%;
+}
+.serviceTxt03 {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.serviceImg04 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  background: url(../images/서비스/wine_red.jpg) no-repeat 50% 45%;
+}
+.serviceTxt04 {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.serviceImg05 {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  background: url(../images/서비스/brunch.png) no-repeat 20% 50%;
+}
+.serviceTxt05 {
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+.serviceImg06 {
+  grid-column: 2/3;
+  grid-row: 5/6;
+  background: url(../images/서비스/bedding.jpg) no-repeat 30% 50%;
+}
+
+.serviceTxt06 {
+  grid-column: 2/3;
+  grid-row: 6/7;
+}
+
+/*reservation*/
+/* calendar calender calendar */
+
+.reservationCheck {
+  display: none;
+}
+
+main {
+  padding: 100px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.yearMonth {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contents {
+}
+
+.left,
+.right {
+  width: 30px;
+  height: 30px;
+}
+.contentsTitle {
+  padding: 12px 15px 0 15px;
+  font-size: 30px;
+}
+
+.stationInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+.station {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.station > li {
+  line-height: 20px;
+  font-size: 15px;
+  margin: 10px;
+  line-height: 15px;
+  align-items: center;
+}
+
+.station > li > img {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-bottom;
+}
+.weeks,
+.dayBox {
+}
+
+.gone {
+  height: 50px;
+}
+.showPay {
+  cursor: pointer;
+}
+.showPay > p {
+  border: 1px solid rgb(229, 229, 229);
+  padding: 5px;
+}
+
+#calender {
+  max-width: 1200px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+.dayBox {
+}
+.date {
+  color: #777;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.calendarTable {
+  border: 1px solid rgb(229, 229, 229);
+  max-width: 1200px;
+}
+
+.weeksTitle {
+  border: 1px solid rgb(229, 229, 229);
+}
+
+.room {
+  padding: 5px;
+}
+
+.room > a {
+}
+.sun {
+  color: red;
+}
+
+.sat {
+  color: skyblue;
+}
+
+.calendarTable > thead {
+}
+.weeksTitle > th {
+  width: 200px;
+  padding: 10px 0;
+}
+
+tr,
+td {
+  border-top: 1px solid rgb(229, 229, 229);
+  border-right: 1px solid rgb(229, 229, 229);
+}
+
+th {
+  border-right: 1px solid rgb(229, 229, 229);
+}
+tr:last-child,
+td:last-child,
+th:last-child {
+  border-right: 0;
+}
+.weeks > td {
+  padding: 10px;
+}
+
+.enable > img {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-bottom;
+}
+
+/* reservation reservation reservation */
+
+.selectDay {
+  overflow: auto;
+  max-width: 1200px;
+  min-height: 600px;
+}
+.selectCalendar {
+  max-width: 49%;
+  float: left;
+}
+
+.selectInfo {
+  max-width: 49%;
+  float: right;
+  padding: 0 50px;
+  line-height: 1.8;
+}
+
+.selectNotice {
+  display: none;
+  max-width: 600px;
+  float: right;
+  line-height: 1.8;
+}
+
+.viewMore {
+  width: 70px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(229, 229, 229);
+  cursor: pointer;
+  float: right;
+  text-align: center;
+}
+
+.viewStop {
+  width: 60px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid rgb(229, 229, 229);
+  cursor: pointer;
+  display: none;
+  float: right;
+  text-align: center;
+}
+
+.roomSelect {
+  height: 650px;
+}
+.ageStandard {
+  float: right;
+}
+.ageStandard > span {
+  font-weight: normal;
+}
+
+.roomSelectTable {
+}
+
+.roomTitle {
+}
+.select {
+  width: 50px;
+  text-align: center;
+}
+.roomImg {
+  width: 200px;
+}
+.roomImg > img {
+  width: 200px;
+  height: 100px;
+  padding: 10px 2px 0 0;
+}
+
+.plus {
+  padding: 2px;
+  cursor: pointer;
+}
+.minus {
+  padding: 4px;
+  cursor: pointer;
+}
+.roomType {
+  width: 200px;
+  line-height: 1.5;
+}
+
+.type1 {
+  color: #777;
+}
+.type3 {
+  font-size: 12px;
+}
+
+.period,
+.adult,
+.child,
+.infant,
+.pay {
+  width: 150px;
+  text-align: center;
+}
+
+.child > p,
+.infant > p {
+  width: 80px;
+  background-color: rgb(229, 229, 229);
+  color: rgb(158, 158, 158);
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+/*reservationcheck page reservationcheck page*/
+.PersonalData {
+  margin: 100px auto;
+  width: 330px;
+}
+
+.dataName > span,
+.dataPhone > span {
+  float: left;
+  margin: 5px;
+  font-size: 18px;
+}
+.dataName > input,
+.dataPhone > input {
+  float: right;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.submit {
+  padding: 5px;
+  margin: 10px 150px;
+  width: 60px;
+}
+
+
+
+
+
+
+
+
+
+/*addService addService addService addService*/
+
+section > h2 {
+  padding-bottom: 20px;
+}
+.addService {
+  height: 1650px;
+}
+
+.addServiceTitle {
+  padding: 20px;
+}
+.addTitle {
+  max-width: 1200px;
+}
+.addName {
+  width: 200px;
+}
+.addInfo {
+  width: 800px;
+}
+.addPrice,
+.addNo {
+  width: 100px;
+}
+
+#add > td {
+  text-align: center;
+  border-bottom: 1px solid #e2d2d2;
+  border-top: 0;
+  border-right: 0;
+}
+#add > td:nth-child(1) {
+  border-left: 0;
+}
+#add > td:nth-child(2) {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.memberInfo {
+  max-width: 1200px;
+  height: 500px;
+}
+
+.memberTitle {
+  width: 200px;
+  float: left;
+}
+
+.memberTitle > p {
+  padding: 10px;
+}
+.etcHeight {
+  height: 180px;
+}
+
+.memberAnswer {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.a1,
+.a2,
+.a3,
+.a4 {
+  width: 200px;
+  margin: 10px;
+}
+
+#idEtc {
+  margin: 10px;
+}
+
+/*termsAgree termsAgree termsAgree termsAgree*/
+.termsAgree {
+  max-width: 1200px;
+  height: 700px;
+}
+.termsAgree > h2 > span {
+  float: right;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 10px;
+}
+.agreeTitle {
+  padding: 10px;
+  border-bottom: 1px solid #e2d2d2;
+  cursor: pointer;
+}
+.agreeTitle > span {
+  float: right;
+}
+
+.moreDetail {
+  padding: 10px;
+  /* display: none; */
+}
+
+.moreDetail > P {
+  line-height: 1.5;
+}
+
+
+
+/*cash cash cash cash */
+.payment {
+  max-width: 1200px;
+}
+.cashNav {
+  padding: 10px;
+}
+.cashNav > h4 {
+  margin-bottom: 10px;
+}
+
+.selectSum {
+  width: 1200px;
+}
+
+.selectList {
+  width: 900px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border: none;
+  margin: 0 auto;
+}
+
+.selectList > th {
+  background-color: inherit;
+  border: none;
+  text-align: center;
+  width: 150px;
+}
+.selectPay > tr {
+  width: 900px;
+  font-size: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#payList,
+#payList > td {
+  border: none;
+}
+#payList > td {
+  width: 150px;
+}
+.ttlPay,
+.won > i {
+  color: rgb(158, 146, 131);
+  font-weight: bold;
+}
+
+.payAccount {
+  max-width: 1200px;
+  text-align: center;
+  margin: 20px;
+}
+.payAccount > p {
+  line-height: 2;
+}
+.payAccount > input,
+#account {
+  padding: 5px;
+  width: 300px;
+  margin: 30px auto;
+}
+
+.lastPayment {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: rgb(158, 146, 131);
+  border: none;
+  color: rgb(214, 204, 192);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/*모바일 + 공통*/
+/*모바일 + 공통*/
+/*모바일 + 공통*/
+@media screen and (max-width: 570px) {
+  #wrap {
+    margin: 0 auto;
+  }
+
+  .header {
+    max-width: 570px;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    background-color: inherit;
+    border-bottom: 1px solid rgb(216, 216, 216);
+  }
+
+  .headerGnb {
+    max-width: 570px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(216, 216, 216);
+  }
+
+  .gnb > li > a,
+  .liveReservation > a > i,
+  .gnbTab > li > a,
+  .liveReservationTab > a > i,
+  .toggleGnb > i {
+    color: #333;
+  }
+
+  .header.gnbBg {
+    background-color: #fff;
+  }
+
+  .headerInner {
+    display: none;
+  }
+
+  .appGnb {
+    width: 570px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .appReservation > a > i,
+  .appReservationGnb > a > i,
+  .toggleGnb > li > i,
+  .toggle > li > i {
+    font-size: 30px;
+    padding: 30px;
+    cursor: pointer;
+  }
+
+  .appReservation > a > i,
+  .toggle > li > i {
+    color: #fff;
+  }
+
+  .appReservationGnb > a > i {
+    color: #333;
+  }
+  .appLogo,
+  .logo {
+    max-width: 370px;
+  }
+  .logo > a > img,
+  .appLogo > a > img {
+    width: 100px;
+    height: 80px;
+  }
+
+  nav {
+    max-width: 100px;
+  }
+
+  .toggle > li,
+  .toggleGnb > li {
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .toggle > li > i {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .subMenu {
+    width: 570px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    display: none;
+    z-index: 9999;
+  }
+  .subMenu > li {
+    background-color: rgb(158, 146, 131);
+    padding: 5px;
+    line-height: 40px;
+    max-width: 570px;
+    text-align: center;
+  }
+  .subMenu > li:hover {
+    background-color: rgb(184, 175, 164);
+  }
+  .subMenu > li > a {
+    color: beige;
+  }
+  .subMenu > li > a:hover {
+    font-weight: bold;
+  }
+
+  .gnb > li > a,
+  .liveReservation > a {
+    color: #fff;
+  }
+
+  .gnb > li > a:hover,
+  .liveReservation > a:hover,
+  .gnbTab > li > a:hover,
+  .liveReservationTab > a > i:hover {
+    color: rgb(158, 146, 131);
+    font-weight: bold;
+    opacity: 0.8;
+  }
+  .liveReservation {
+    display: none;
+  }
+
+  /*visual start*/
+  #visual {
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-theme-color {
+    color: #fff;
+  }
+
+  /*visual end*/
+
+  /*footer start*/
+  footer {
+    max-width: 570px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .footerInner {
+    max-width: 570px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .hr {
+    max-width: 570px;
+  }
+  .info {
+    padding-top: 40px;
+  }
+  .info > p {
+    line-height: 2;
+    color: #404040;
+    font-size: 18px;
+  }
+  .info > p > span {
+    font-weight: bolder;
+  }
+  .sns {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+  }
+
+  .insta > a > i,
+  .facebook > a > i,
+  .map > a > i {
+    font-size: 30px;
+  }
+
+  /*footer end*/
+
+  /*기록 record start*/
+  #gnb02Contents {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    max-width: 570px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: repeat(7 1fr);
+    padding: 70px;
+  }
+  .gallery li {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+  }
+  .gallery > li:hover img {
+    transform: scale(1.2);
+    transition: transform 1s;
+    filter: brightness(70%);
+  }
+
+  .gallery > li > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .imgbox01 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .imgbox02 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .imgbox03 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .imgbox04 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .imgbox05 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .imgbox06 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  /*기록 record end*/
+
+  #gnb03Contents {
+    padding: 100px 0;
+    max-width: 570px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* .title {
+    margin: 0 auto;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .title > img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .titleTxt {
+    font-size: 30px;
+    text-align: center;
+    line-height: 2;
+    color: rgb(158, 146, 131);
+  } */
+
+  /* .title {
+    padding: 80px;
+  } */
+  .title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .title > img {
+    width: 100px;
+    height: 100px;
+  }
+  .titleTxt {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(158, 146, 131);
+    line-height: 1.6;
+  }
+
+  .serviceMenu {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: repeat(13 1fr);
+  }
+  .serviceMenu > li {
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .serviceMenu > li > img {
+    width: 80vw;
+    height: 80vh;
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .serviceTxtDetail > li {
+    line-height: 2;
+  }
+
+  .serviceMenu > li:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    height: 300px;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .serviceMenu > li:nth-child(2n) > h2,
+  .txtBold {
+    color: rgb(158, 146, 131);
+  }
+  .serviceMenu > li:nth-child(2n-1) {
+    height: 20vh;
+  }
+  .serviceImg01 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background: url(../images/서비스/barbeque.jpg) no-repeat 30% 100%;
+  }
+  .serviceTxt01 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .serviceImg02 {
+    grid-column: 1/2;
+    grid-row: 3/3;
+    background: url(../images/서비스/spar.png) no-repeat 30% 50%;
+  }
+
+  .serviceTxt02 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .serviceImg03 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    background: url(../images/서비스/wine_white.jpg) no-repeat 50% 40%;
+  }
+  .serviceTxt03 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .serviceImg04 {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    background: url(../images/서비스/wine_red.jpg) no-repeat 50% 45%;
+  }
+  .serviceTxt04 {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
+  .serviceImg05 {
+    grid-column: 1/2;
+    grid-row: 9/10;
+    background: url(../images/서비스/brunch.png) no-repeat 20% 50%;
+  }
+  .serviceTxt05 {
+    grid-column: 1/2;
+    grid-row: 10/11;
+  }
+  .serviceImg06 {
+    grid-column: 1/2;
+    grid-row: 11/12;
+    background: url(../images/서비스/bedding.jpg) no-repeat 30% 50%;
+  }
+
+  .serviceTxt06 {
+    grid-column: 1/2;
+    grid-row: 12/13;
+  }
+
+  /* reservation reservation reservation */
+
+  .check {
+    height: 50px;
+    max-width: 570px;
+  }
+  .reservationCheck {
+    max-width: 570px;
+    display: block;
+    border: 1px solid rgb(216, 216, 216);
+    background-color: rgb(158, 146, 131);
+    padding: 5px;
+    float: left;
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+  }
+
+  .reservationCheck > a {
+    font-size: 18px;
+    color: beige;
+  }
+  .stationInfo {
+    max-width: 570px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .station {
+    display: block;
+  }
+  .station > li {
+  }
+  .showPay {
+  }
+}

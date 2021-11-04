@@ -1,0 +1,654 @@
+/* qna board */
+.qnaBoard table, #writeBoard table,  #contents table, #viewBoard table { 
+   border: none;
+   border-collapse: collapse; 
+   border-top: 1px solid #333; 
+   width: 100%;
+   font-size: 13px; 
+}
+
+.form { 
+   max-width: 1200px; 
+   margin: 0 auto; 
+}
+
+.form table.tdLeft td { 
+   text-align: left; 
+}
+.form thead .thNum {
+	width: 7%;
+}
+.form thead .thSub {
+	width: 83%;
+}
+.form thead .thWriter {
+	width: 10%;
+}
+
+.form tbody td {
+	
+}
+.form tbody .tdNum {
+	text-align: center;
+	color: rgb(64,64,64); 
+}
+.form tbody .tdSub {
+	text-align: left;
+	color: rgb(64,64,64);
+	padding-left: 30px;
+}
+.form tbody .tdSub span {
+	
+}
+.form tbody .tdWriter {
+	text-align: center; 
+	color: rgba(64,64,64,0.4);
+}
+.form tbody .material-icons {
+	font-size: 13px;
+	color: #999;
+}
+
+.listReplyCount {
+	font-size: 11px;
+	color: rgba(64,64,64,0.4);
+}
+
+.form tbody td.left { 
+   text-align: left; 
+}
+
+.form tbody td.space2 { 
+   padding-left: 20px; 
+}
+
+.form tbody td.space3 { 
+   padding-left: 40px; 
+}
+
+.form tbody td.space4 { 
+   padding-left: 60px; 
+}
+
+.form tbody td textarea { 
+   width: 100%; 
+   min-height: 400px; 
+   resize: none; 
+}
+
+.form tbody td .badge { 
+   padding: 10px; 
+   background: #111; 
+   color: #fff; 
+   border-radius: 5px;
+   margin-left: 10px; 
+}
+
+.form thead th { 
+   border-top: 1px solid #333;
+}
+
+.form td, .form th { 
+   padding: 10px; 
+   border: none; 
+   border-bottom: 1px solid rgba(64,64,64,0.4); 
+}
+
+.form th { 
+   font-weight: 400; 
+   
+}
+
+.form input[type="text"], .form input[type="password"], .form input[type="number"], .form input[type="button"], .form select { 
+	border: none;
+    border-bottom: 1px solid rgba(64,64,64,0.4); 
+	padding: 10px;
+}
+
+.form input[type="button"] { 
+	background-color: #000; 
+	border-radius: 5px; 
+	color: #fff; 
+	min-width: 80px; 
+}
+
+.form .short { 
+	width: 150px; 
+	min-width: 150px !important; }
+
+.form td .txtPass {
+	font-size: 12px; 
+	color: #002bb9; 
+}
+
+.form td .txtPass.red { 
+	color: #aa020a; 
+}
+
+.form .txtContents { 
+	white-space: pre; 
+}
+.btnWriteBox {
+   display: flex;
+   justify-content: right;
+}
+.btnWrite {
+   background-color: #9e9283;
+   margin: 15px 0;
+   padding: 7px 20px 7px;
+   color: #fff;
+   font-weight: bold;
+   border: none;
+ }
+ .btnWrite > a {
+   color: #fff;
+   font-weight: bold;
+ }
+
+.paginationBox { margin-top: 20px; }
+
+.paginationBox ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.paginationBox ul li.active a { background-color: #9e9283; color: #fff; }
+
+.paginationBox ul li a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 30px; height: 30px; background-color: none; color: rgba(64,64,64,0.4); border-radius: 3px; margin: 0 3px; }
+
+.searchForm { background: #f8f8f8; padding: 50px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; border: 1px solid #ccc; margin-top: 50px; }
+
+.searchForm .searchSelect { min-width: 200px; width: 200px; }
+
+.searchForm .btn { height: 45px; width: 120px; margin-left: 10px; }
+
+
+
+
+/* qna write */
+#writeBoard {
+   padding-top: 80px;
+   max-width: 900px;
+   margin: 0 auto;
+}
+.contentsTitle {
+   padding: 20px;
+   margin-bottom: 10px;
+   text-align: center;
+   color: #9e9283;
+   font-size: 18px;
+   border-bottom: 2px solid #9e9283;
+
+}
+#writeBoard .writeTable {
+	border: none;
+}
+.writeTable td {
+   border: none;
+   padding: 10px 0;
+}
+.writeTable input:focus {
+	outline: none;
+	border-bottom: 2px solid #9e9283;
+}
+.writeTable input::placeholder {
+   font-size: 13px;
+   color: rgba(64,64,64,0.4);
+}
+.writeTable .writeName {
+   width: 33%;
+   padding-right: 20px;
+}
+.writeName > input {
+   
+}
+.writeTable .writePw {
+   width: 33%;
+   padding-right: 20px;
+}
+.writeTable .writeRadio {
+   width: 40%;
+   text-align: right;
+   padding-right: 20px;
+}
+.writeRadio input[type='radio'] {
+   vertical-align: middle;
+   appearance:none;
+   width:13px;
+   height:13px;
+   border:1px solid darkgray;
+   outline:none;
+   background:#fff;
+}
+.writeRadio input[type='radio']:checked {
+   background:#9e9283;
+}
+.writeRadio > span {
+	font-size: 13px;
+	color: rgb(64,64,64);
+	vertical-align: middle;
+	
+}
+.writeTable .writeSub {
+	width: 100%;
+}
+.writeTable .writeSub input {
+	width: 100%;
+}
+.form tbody td textarea {
+   border: 1px solid rgba(64,64,64,0.4);
+   padding: 10px;
+}
+.form tbody td textarea:focus {
+   outline: none;
+	border: 2px solid #9e9283;
+}
+.form tbody td textarea::placeholder {
+   font-size: 13px;
+   color: rgba(64,64,64,0.4);
+}
+.form .btns {
+   width: 310px;
+   margin: 20px auto;
+   display: flex;
+   justify-content: space-between;
+}
+.form .btns input {
+   width: 145px;
+   height: 50px;
+   box-sizing: border-box;
+   margin: 15px 0;
+   padding: 10px 20px 10px;
+   color: #fff;
+   font-weight: bold;
+   border: none;
+   background-color: #9e9283;
+   text-align: center;
+}
+.form .btns input:hover {
+   cursor: pointer;
+}
+.form .btns input:first-child {
+   margin-right: 20px;
+}
+.form .btns input:focus {
+   outline: none;
+}
+
+/* view */
+#viewBoard {
+   padding-top: 80px;
+   max-width: 900px;
+   margin: 0 auto 30px;;
+}
+.contentsTitle {
+   padding: 20px;
+   margin-bottom: 10px;
+   text-align: center;
+   color: #9e9283;
+   font-size: 18px;
+   border-bottom: 2px solid #9e9283;
+
+}
+#viewBoard .viewTable {
+	border: none;
+   color: rgb(64,64,64);
+}
+.viewTable .viewName {
+	
+}
+.viewTable .viewQna {
+
+}
+.viewTable .viewQna > a:hover {
+   cursor: pointer;
+}
+.viewTable .viewModify > a:hover {
+   cursor: pointer;
+}
+.viewTable .viewDelete > a:hover {
+   cursor: pointer;
+}
+.form table.tdLeft td.viewModify {
+	text-align: center;
+}
+.form table.tdLeft td.viewDelete {
+	text-align: center;
+}
+table > tbody > tr > td.txtContents {
+   height: 300px;
+}
+.replyQnaCount {
+   padding-left: 10px;
+   height: 60px;
+   line-height: 60px;
+}
+.replyQnaCount > span {
+   font-size: 13px;
+}
+.replyQnaListBox {
+   color: rgb(64,64,64);
+   font-size: 13px;
+}
+.replyQnaList {
+   padding: 15px 10px;
+   border-bottom: 1px solid rgba(64,64,64,0.4);
+   
+}
+.replyWriter {
+   margin-bottom: 10px;
+   font-size: 11px;
+}
+.replyText {
+   margin-bottom: 10px;
+}
+#correction, #delete {
+   border: none;
+   background: none;
+   font-size: 11px;
+   color: rgba(64,64,64,0.4);
+}
+.replyQnaList  button:hover {
+   cursor: pointer;
+}
+#correction, #delete  a {
+   color: rgba(64,64,64,0.4);
+}
+.deleteReplyBox {
+   display: none;
+}
+.deleteReplyBox input.deletePwd {
+   outline: none;
+}
+.deleteReplyBox input.deletePwd:focus {
+   border-bottom: 2px solid #9e9283;
+}
+.deleteReplyBox .deleteBtnPwd {
+   background-color: #9e9283;
+   margin: 10px;
+   padding: 7px 20px 7px;
+   border: none;
+   font-size: 13px;
+   color: #fff;
+   font-weight: bold;
+}
+.deleteReplyBox .deleteCancelBtn {
+   background-color: rgba(64,64,64,0.4);
+   margin: 10px 0;
+   padding: 7px 20px 7px;
+   border: none;
+   font-size: 13px;
+   color: #fff;
+   font-weight: bold;
+}
+
+.updateReplyBox {
+   display: flex;
+   flex-flow: row wrap;
+   margin-top: 5px;
+}
+.form .updateReplyBox input {
+   width: 200px;
+   margin-right: 10px;
+   border: 1px solid rgba(64,64,64,0.4); 
+}
+.form .updateReplyBox input:focus {
+	outline: none;
+	border: 2px solid #9e9283;
+}
+.updateContentsBox {
+   margin-top: 10px;
+   width: 100%;
+   text-align: right;
+   
+}
+.updateContentsBox textarea {
+   width: 100%;
+   height: 60px;
+   border: 1px solid rgba(64,64,64,0.4);
+   padding: 10px;
+   resize: none;
+}
+.updateContentsBox textarea::placeholder {
+   font-size: 13px;
+}
+.updateContentsBox textarea:focus {
+   outline: none;
+   border: 2px solid #9e9283;
+}
+.updateContentsBox .updateBtnPwd {
+   
+   background-color: #9e9283;
+   margin: 15px 0 0;
+   padding: 7px 20px 7px;
+   color: #fff;
+   font-weight: bold;
+   border: none;
+}
+.updateContentsBox .updateCancelBtn {
+   background-color: rgba(64,64,64,0.4);
+   margin: 15px 0 0;
+   padding: 7px 20px 7px;
+   color: #fff;
+   font-weight: bold;
+   border: none;
+}
+
+.updateReplyBox .updateInfoBox {
+   display: flex;
+   justify-content: flex-start;
+}
+.updateReplyBox .updateContentsBox {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: flex-end;
+}
+.updateContentsBox .updateBtnPwd {
+   margin-right: 10px;
+}
+
+.prevAndNext { 
+   margin: 30px 0 10px; 
+}
+
+.prevAndNext .item {
+   font-size: 13px;
+   border-top: 1px solid rgba(64,64,64,0.4);
+   border-bottom: 1px solid rgba(64,64,64,0.4);
+   padding: 10px 0 10px 10px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.viewBtns {
+   display: flex;
+   justify-content: space-between;
+}
+
+.viewBtns a {
+   background-color: #9e9283;
+   margin: 10px 0;
+   padding: 7px 20px 7px;
+   border: none;
+   font-size: 13px;
+   color: #fff;
+   font-weight: bold;
+}
+
+/* replyQna */
+#replyQna {
+	margin-top: 10px;
+}
+.replyQna_area {
+   display: flex;
+   flex-flow: row wrap;
+}
+.form .replyQna_area input {
+   width: 200px;
+   margin-right: 10px;
+   border: 1px solid rgba(64,64,64,0.4); 
+}
+.form .replyQna_area input:focus {
+	outline: none;
+	border: 2px solid #9e9283;
+}
+.replyQnaBox {
+   margin-top: 10px;
+   width: 100%;
+   
+}
+.replyQnaBox textarea {
+   width: 100%;
+   height: 60px;
+   border: 1px solid rgba(64,64,64,0.4);
+   padding: 10px;
+   resize: none;
+}
+.replyQnaBox textarea::placeholder {
+   font-size: 13px;
+}
+.replyQnaBox textarea:focus {
+   outline: none;
+   border: 2px solid #9e9283;
+}
+.replyQnaBox .btnReply {
+   float: right;
+   background-color: #9e9283;
+   margin: 15px 0;
+   padding: 7px 20px 7px;
+   color: #fff;
+   font-weight: bold;
+   border: none;
+}
+.replyQnaBox .btnReply:hover {
+   cursor: pointer;
+}
+
+/* update */
+
+/* delete */
+#writeBoard .deleteTable {
+   border: none;
+}
+.deletePw  input {
+	outline: none;
+	text-align: center;
+}
+.deletePw  input:focus {
+	border-bottom: 2px solid #9e9283; 
+}
+.deleteBtn {
+   margin: 20px 0 200px;
+   display: flex;
+   justify-content: center;
+}
+.deleteBtn > input {
+   width: 100px;
+   height: 30px;
+   background-color: #9e9283;
+   margin: 10px 0;
+   padding: 7px 20px 7px;
+   border: none;
+   font-size: 13px;
+   color: #fff;
+   font-weight: bold;
+   outline: none;
+   text-align: center;
+}
+.deleteBtn > input:hover {
+   cursor: pointer;
+}
+.deleteBtn input:first-child {
+	margin-right: 10px;
+}
+
+/* mobile 570 */
+@media screen and (max-width: 570px) {
+/* qna board */
+.form thead .thNum {
+	width: 15%;
+}
+.form thead .thSub {
+	width: 65%;
+}
+.form thead .thWriter {
+	width: 20%;
+}
+
+/* write */
+#writeBoard .mobileFlex {
+   display: flex;
+   flex-flow: column wrap;
+}
+.writeTable .writeName {
+   width: 100%;
+   padding-right: 0;
+}
+.writeTable .writePw {
+   width: 100%;
+   padding-right: 0;
+}
+.writeTable .writeRadio {
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid rgba(64,64,64,0.4);
+   padding: 0 0 20px;
+   margin: 10px 0;
+}
+.mobileFlex > .writeName > input {
+	width: 100%;
+}
+.mobileFlex > .writePw > input {
+	width: 100%;
+}
+.form .btns {
+   width: 310px;
+   margin: 20px auto;
+   display: flex;
+   justify-content: space-between;
+}
+.form .btns input {
+   width: 145px;
+   height: 50px;
+   box-sizing: border-box;
+   margin: 15px 0;
+   padding: 10px 20px 10px;
+   color: #fff;
+   font-weight: bold;
+   border: none;
+   background-color: #9e9283;
+   text-align: center;
+}
+.form .btns input:first-child {
+   margin-right: 20px;
+}
+.form .btns input:focus {
+   outline: none;
+}
+
+/* view */
+.updateReplyBox .updateInfoBox {
+   width: 100%;
+   justify-content: space-between;
+}
+.updateReplyBox .updateInfoBox > input {
+   width: 49%;
+   margin-right: 0;
+}
+
+/* replyQna */
+.replyQna_area {
+   width: 100%;
+   justify-content: space-between;
+}
+.replyQna_area > div {
+   width: 49%;
+}
+.form .replyQnaBox {
+   width: 200%;
+}
+.form .replyQna_area input {
+   width: 100%;
+   margin-right: 0;
+}
+
+
+}

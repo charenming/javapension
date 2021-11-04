@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet"
+	href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/style_main.css" />
+
+<!-- Swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/script_main.js"></script>
+
+<!--폰트-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+	rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+	integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+	crossorigin="anonymous" />
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<title>자바펜션 | 영종도을왕리</title>
+</head>
+
+<body>
+	<div id="wrap">
+		<header class="header" id="header">
+			<div class="headerInner">
+				<div class="logo">
+					<a href="Main.do"><img src="images/logo.png" alt="logo" /></a>
+				</div>
+				<div class="logoBlack">
+					<a href="Main.do"><img src="images/logo.png" alt="logo" /></a>
+				</div>
+				<ul class="gnb">
+					<li><a href="RoomForm.do">공간</a></li>
+					<li><a href="PotoForm.do">포토</a></li>
+					<li><a href="ServiceForm.do">서비스</a></li>
+					<li><a href="LocationForm.do">위치</a></li>
+					<li><a href="TourForm.do">여행</a></li>
+					<li><a href="QnaList.do">문의</a></li>
+				</ul>
+				<div class="liveReservation">
+					<a href="RealtimeReservation.do"> <i class="far fa-paper-plane">실시간예약</i>
+					</a>
+					<ul class="rsSubMenu">
+						<li><a href="Reservation.do">예약하기</a></li>
+						<li><a href="ReservationCheck.do">예약확인</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="appGnb">
+				<div class="appReservation">
+					<a href="ReservationForm.do"><i class="far fa-paper-plane"></i></a>
+				</div>
+				<div class="appLogo">
+					<a href="Main.do"><img src="images/logo.png" alt="logo" /></a>
+				</div>
+				<nav>
+					<ul class="toggle">
+						<li><i class="fas fa-bars"></i>
+							<ul class="subMenu">
+								<li><a href="RoomForm.do">공간</a></li>
+								<li><a href="PotoForm.do">포토</a></li>
+								<li><a href="ServiceForm.do">서비스</a></li>
+								<li><a href="LocationForm.do">위치</a></li>
+								<li><a href="TourForm.do">여행</a></li>
+								<li><a href="QnaList.do">문의</a></li>
+							</ul></li>
+					</ul>
+				</nav>
+			</div>
+		</header>

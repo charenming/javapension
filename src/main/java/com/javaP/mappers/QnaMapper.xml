@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javaP.mapper.QnaMapper">
+	<insert id="insertQna" parameterType="QnaDto">
+		INSERT INTO QNA VALUES (
+								SEQ_QNA.NEXTVAL,
+								#{title},
+								#{contents},
+								#{writer},
+								#{password},
+								#{secret}
+								)	
+	</insert>
+	
+	<select id="getPassword" parameterType="Integer" resultType="String">
+		SELECT PASSWORD FROM QNA WHERE NO = #{no}
+	</select>
+	
+	<delete id="deleteQna" parameterType="Integer">
+		DELETE FROM QNA WHERE NO = #{no}
+	</delete>
+	
+	<update id="updateQna" parameterType="QnaDto">
+		UPDATE QNA SET TITLE= #{title},
+					   WRITER = #{writer},
+					   CONTENTS = #{contents}
+				   WHERE NO = #{no}
+	</update>
+	 <!--  
+	<select id="getAllList" parameterType="HashMap" resultType="QnaDto">
+		SELECT * FROM (SELECT B.*,ROWNUM AS NUM FROM ( SELECT * FROM QNA ORDER BY NO DESC) B )
+		WHERE NUM  <![CDATA[>=]]>  #{start} AND NUM  <![CDATA[<]]>  #{end}
+	</select>
+	-->
+	 
+	<select id="getAllList" parameterType="HashMap" resultType="QnaDto">
+		SELECT no,title,contents,writer,password,secret,num,
+		(select count(*) from replyqna where qnanum = bb.no) as replyCount,
+		RPAD(SUBSTR(writer,1,2),8,'*') AS MASKING 
+		FROM (SELECT B.*,ROWNUM AS NUM FROM ( SELECT * FROM QNA ORDER BY NO DESC) B ) bb  
+		WHERE NUM  <![CDATA[>=]]>  #{start} AND NUM  <![CDATA[<]]>  #{end}
+	</select>
+	
+	<select id="getTotal" resultType="Integer">
+		SELECT COUNT(*) AS TOTAL FROM QNA
+	</select>
+	
+	<!-- 하나 읽기 -->
+	<select id="getQnaSelectOne" parameterType="Integer" resultType="QnaDto">
+		SELECT no,title,contents,writer,password,secret,
+		RPAD(SUBSTR(writer,1,2),8,'*') AS MASKING
+		FROM QNA WHERE NO = #{no}
+	</select>
+	
+	<!-- 댓글 쓰기 -->
+	<insert id="insertReplyQna" parameterType="ReplyQnaDto">
+		INSERT INTO REPLYQNA VALUES (
+									 SEQ_REPLYQNA.NEXTVAL,
+									 #{qnaNum},
+									 #{writer},
+									 #{password},
+									 #{contents}
+									)
+	</insert>
+	
+	<select id="getAllReply" parameterType="HashMap" resultType="ReplyQnaDto">
+		SELECT no,qnanum,writer,password,contents,
+		RPAD(SUBSTR(writer,1,2),8,'*') AS MASKING
+		FROM REPLYQNA WHERE QNANUM = #{qnaNum} ORDER BY NO ASC
+	</select>
+	
+	<delete id="deleteReply" parameterType="Integer">
+		DELETE FROM REPLYQNA WHERE NO = #{no}
+	</delete>
+	
+	<select id="getReplyPassword" parameterType="Integer" resultType="String">
+		SELECT PASSWORD FROM REPLYQNA WHERE NO = #{no}
+	</select>
+	
+	<select id="getReplyTotal" parameterType="Integer" resultType="Integer">
+		SELECT COUNT(*) AS TOTAL FROM REPLYQNA WHERE QNANUM = #{qnaNum}
+	</select>
+	
+	<update id="updateReply" parameterType="ReplyQnaDto">
+		UPDATE REPLYQNA SET WRITER = #{writer},
+ 							CONTENTS = #{contents}
+				   WHERE NO = #{no}
+	</update>
+	
+	
+	<update id="updateReplyQna" parameterType="Integer">
+		UPDATE REPLYQNA SET REPLYCOUNT = REPLYCOUNT + 1 WHERE NO = #{no}
+	</update>
+	
+	<!--   이전 글 가져오기 -->
+	<select id="getSelectPrev" parameterType="Integer" resultType="QnaDto">
+		SELECT * FROM (SELECT B.*,ROWNUM AS NUM FROM ( SELECT * FROM QNA ORDER BY NO DESC) B ) WHERE NUM = #{num} - 1
+	</select>
+	<!--   다음 글 가져오기 -->
+	<select id="getSelectNext" parameterType="Integer" resultType="QnaDto">
+		SELECT * FROM (SELECT B.*,ROWNUM AS NUM FROM ( SELECT * FROM QNA ORDER BY NO DESC) B ) WHERE NUM = #{num} + 1
+	</select>
+	<!--  현재 글 번호 가져오기 -->
+	<select id="getCurrentNum" parameterType="Integer" resultType="QnaDto">
+		SELECT * FROM (SELECT B.*,ROWNUM AS NUM FROM ( SELECT * FROM QNA ORDER BY NO DESC) B ) WHERE NUM = #{num}
+	</select>
+</mapper>

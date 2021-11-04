@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javaP.mappers.ReserveMapper">
+	
+	
+	<insert id="insertReserve" parameterType="java.util.List">
+		<foreach collection="list" item="item" open="INSERT ALL" separator=" " close="SELECT * FROM DUAL">
+				INTO RESERVE	VALUES (
+										TO_DATE(#{item.reserve_date},'YYYYMMDD'),
+										#{item.reserve_room},
+										#{item.name},
+										#{item.phone},
+										#{item.arrive},
+										#{item.request},
+										#{item.howToKnow},
+										#{item.persons},
+										#{item.vaccine},
+										#{item.brunch},
+										#{item.coalAndGrill01},
+										#{item.coalAndGrill02},
+										#{item.whiteWine},
+										#{item.redWine},
+										#{item.spar},
+										SEQ_RESERVE_NUM.NEXTVAL
+										)	
+		</foreach>
+	</insert>
+	
+	
+	
+	<delete id="deleceReserve" parameterType = "ReserveDto">
+		DELETE FROM RESERVE
+		WHERE
+			reserve_num = #{reserve_num}
+	</delete>
+
+
+
+
+
+	<select id="checkReservedRoom" resultType="ReserveDto" parameterType="ReserveDto">
+		SELECT RESERVE_ROOM, '1' AS RESERVED
+		FROM RESERVE
+		WHERE #{reserve_date} = TO_CHAR(RESERVE_DATE,'YYYYMMDD')		
+	</select>
+
+	<select id="getAllReserveList" resultType="ReserveDto" parameterType="ReserveDto">
+		SELECT
+			TO_CHAR(RESERVE_DATE, 'YYYYMMDD') AS RESERVE_DATE,
+			RESERVE_ROOM,
+			NAME,
+			PHONE
+		FROM RESERVE
+		WHERE
+			#{reserve_date} <![CDATA[<=]]> TO_CHAR(RESERVE_DATE, 'YYYYMMDD')
+		ORDER BY RESERVE_DATE
+	</select>
+	
+	<select id="getReserveList" resultType="ReserveDto" parameterType="ReserveDto">
+		SELECT TO_CHAR(RESERVE_DATE, 'YYYY-MM-DD') AS RESERVE_DATE, RESERVE_ROOM, ARRIVE, PERSONS, VACCINE, REQUEST, RESERVE_NUM, '0' AS REMOVABLE
+		FROM RESERVE
+		WHERE NAME = #{name} AND PHONE = #{phone} AND TO_CHAR(RESERVE_DATE, 'YYYYMMDD') <![CDATA[<=]]> TO_CHAR(SYSDATE, 'YYYYMMDD') 
+		
+		UNION ALL
+
+		SELECT TO_CHAR(RESERVE_DATE, 'YYYY-MM-DD') AS RESERVE_DATE, RESERVE_ROOM, ARRIVE, PERSONS, VACCINE, REQUEST, RESERVE_NUM, '1' AS REMOVABLE
+		FROM RESERVE
+		WHERE NAME = #{name} AND PHONE = #{phone} AND TO_CHAR(RESERVE_DATE, 'YYYYMMDD') <![CDATA[>]]> TO_CHAR(SYSDATE, 'YYYYMMDD') 
+		ORDER BY RESERVE_DATE
+		
+	</select>
+	
+	<select id="durationCheck" resultType="ReserveDto" parameterType="ReserveDto">
+		SELECT RESERVE_ROOM, MIN(RESERVE_DATE - TO_DATE(#{reserve_date},'YYYYMMDD')) AS DURATIONDATE
+		FROM RESERVE
+		WHERE TO_CHAR(RESERVE_DATE, 'YYYYMMDD') BETWEEN #{reserve_date} AND TO_CHAR(TO_DATE(#{reserve_date},'YYYYMMDD')+9 ,'YYYYMMDD')
+		GROUP BY RESERVE_ROOM
+	</select>
+</mapper>
+
+
+
+
+
+
+

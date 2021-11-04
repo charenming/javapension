@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javaP.mappers.GalleryMapper">
+
+	<select id="getAllGallery" resultType="GalleryDto">
+		SELECT * FROM GALLERYANDREPLY ORDER BY NO DESC
+	</select>
+	<insert id="insertGallery" parameterType="GalleryDto">
+		INSERT INTO GALLERY VALUES (
+									SEQ_GALLERY.NEXTVAL,
+									#{title},
+									#{contents},
+									#{img},
+									#{realImg},
+									#{id},
+									#{password}
+								    )
+	</insert>
+	<insert id="insertGalleryReply" parameterType="ReplyGalleryDto">
+		INSERT INTO REPLYGALLERY VALUES (
+										 SEQ_REPLYGALLERY.NEXTVAL,
+										 #{boardId},
+										 #{reply},
+										 #{id},
+										 #{password}
+										 )
+	</insert>
+	<select id="getAllGalleryReply" parameterType="Integer" resultType="ReplyGalleryDto">
+		SELECT * FROM REPLYGALLERY WHERE BOARDID = #{boardId} ORDER BY NO DESC
+	</select>
+	
+	<select id="getGalleryReplyRI" parameterType="Integer" resultType="ReplyGalleryDto">
+		SELECT REPLY,ID FROM REPLYGALLERY WHERE NO = #{no}
+	</select>
+	
+	<delete id="deleteGalleryReply" parameterType="ReplyGalleryDto">
+		DELETE FROM REPLYGALLERY WHERE NO = #{no} AND PASSWORD = #{password}
+	</delete>
+	<update id="updateGalleryReply" parameterType="ReplyGalleryDto">
+		UPDATE REPLYGALLERY SET REPLY = #{reply}
+				   WHERE NO = #{no} AND PASSWORD = #{password}
+	</update>
+</mapper>

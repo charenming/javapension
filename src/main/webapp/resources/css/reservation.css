@@ -1,0 +1,1247 @@
+@charset "UTF-8";
+/*pc*/
+#wrap {
+   margin: 0 auto;
+}
+/*reservation*/
+/* calendar calender calendar */
+.hrColor {
+   border: 1px solid #e2d2d2;
+}
+
+.reservationCheck {
+   display: none;
+}
+
+main {
+   padding: 130px 0;
+   margin: 0 auto;
+   max-width: 1200px;
+}
+
+.reserveContents section {
+   padding:40px;
+}
+
+.yearMonth {
+   padding: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.selectDay .dates>.weeks>td {
+   height: 60px;
+   text-align: center;
+   vertical-align: middle;
+}
+
+.weeks>td.selectable {
+   cursor: pointer;
+}
+
+.weeks>td.selected {
+   box-shadow: inset 0 0 0 1px #000;
+}
+
+#contents {
+   
+}
+
+.left, .right {
+   width: 30px;
+   height: 30px;
+}
+
+.yearMonth>.contentsTitle {
+   padding: 12px 15px 0 15px;
+   font-size: 30px;
+   color: #333;
+   border-bottom: 0;
+   margin-bottom: 0;
+   text-align: center;
+}
+
+.stationInfo {
+   display: flex;
+   justify-content: space-between;
+   width: 1200px;
+}
+
+.station {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 50px;
+}
+
+.station>li {
+   line-height: 20px;
+   font-size: 15px;
+   margin: 10px;
+   line-height: 15px;
+   align-items: center;
+}
+
+.station>li>img {
+   width: 20px;
+   height: 20px;
+   vertical-align: text-bottom;
+}
+
+.monthChange {
+   cursor: pointer;
+}
+
+.weeks, .dayBox {
+   
+}
+
+.gone {
+   
+}
+
+.showPay>p {
+   cursor: pointer;
+}
+
+.showPay>p {
+   border: 1px solid rgb(229, 229, 229);
+   padding: 5px;
+}
+
+#calender {
+   max-width: 1200px;
+   max-height: 500px;
+   margin: 0 auto;
+}
+
+.dayBox {
+   
+}
+
+.date {
+   color: #777;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+}
+
+.calendarTable {
+   border: 1px solid rgb(229, 229, 229);
+   border-collapse: collapse; /*테두리 사이의 간격을 없애줌*/
+   max-width: 1200px;
+}
+
+.calendarTable>thead>tr>th {
+   background-color: rgb(243, 243, 243);
+   font-weight: normal;
+   height: 40px;
+}
+
+.calendarTable>tbody>tr>th, .calendarTable>tbody>tr>td {
+   border: 1px solid #e2d2d2; /*표 테두리 색 */
+   font-weight: normal;
+   height: 40px;
+}
+
+.weeksTitle {
+   border: 1px solid rgb(229, 229, 229);
+}
+
+.room {
+   padding: 7px 0 3px;
+}
+
+.gone {
+   color: #aaa;
+}
+
+.room>a {
+   
+}
+
+.sun {
+   color: red;
+}
+
+.sat {
+   color: skyblue;
+}
+
+.calendarTable>thead {
+   
+}
+
+.calendarTable td {
+   width: 0.2vw;
+}
+
+.weeksTitle>th {
+   width: 200px;
+   padding: 10px 0;
+}
+
+th {
+   border: 1px solid #e2d2d2;
+}
+
+
+.weeks>td {
+   padding: 10px;
+   vertical-align: top;
+}
+
+.enable>img, .disable>img {
+   width: 20px;
+   height: 20px;
+   vertical-align: text-bottom;
+}
+
+.disable {
+   color: #aaa;
+}
+
+.disable .reserver {
+   font-size: 14px;
+   color: #ccc;
+   display: none;
+}
+
+.disable:hover .reserver {
+   display: block;
+   width: 160px;
+   height: 28px;
+   background-color: rgba(0, 0, 0, 0.8);
+   border: 1px solid black;
+   border-radius: 5px;
+   z-index: 9999;
+   text-align: center;
+   line-height: 28px;
+}
+
+.roomValue {
+   font-size: 13px;
+   display: none;
+}
+
+/* reservation reservation reservation */
+.selectDay {
+   overflow: auto;
+   max-width: 1200px;
+}
+
+.selectCalendar {
+   max-width: 49%;
+   float: left;
+}
+
+.selectInfo {
+   max-width: 49%;
+   float: right;
+   padding: 0 50px;
+   line-height: 1.8;
+}
+
+.selectNotice {
+   display: none;
+   max-width: 600px;
+   float: right;
+   line-height: 1.8;
+}
+.selectInfo>ul>li {
+   list-style: circle;
+}
+.viewMore {
+   width: 70px;
+   margin: 10px;
+   padding: 10px;
+   border: 1px solid rgb(229, 229, 229);
+   cursor: pointer;
+   float: right;
+   text-align: center;
+}
+
+.viewStop {
+   width: 60px;
+   padding: 10px;
+   margin: 10px;
+   border: 1px solid rgb(229, 229, 229);
+   cursor: pointer;
+   display: none;
+   float: right;
+   text-align: center;
+}
+
+.roomSelect {
+}
+
+.roomSelect>h2 {
+   padding-left: 20px;
+}
+
+.ageStandard {
+   float: right;
+}
+
+.ageStandard>span {
+   font-weight: normal;
+}
+
+.roomSelectTable {
+   border-collapse: collapse; /*테두리 사이의 간격을 없애줌*/
+}
+
+.roomTitleTh>th {
+   background-color: rgb(243, 243, 243);
+   font-weight: normal;
+   height: 40px;
+   padding: 0 40px;
+}
+
+.roomSelectTable tbody>tr>th, .roomSelectTable tbody>tr>td {
+   border: 1px solid #e2d2d2; /*표 테두리 색 */
+   font-weight: normal;
+   height: 38px;
+   text-align: center;
+}
+
+
+
+.roomImg {
+   width: 200px;
+}
+
+.roomImg>img {
+   width: 200px;
+   height: 100px;
+}
+
+.plus {
+   padding: 2px;
+   cursor: pointer;
+}
+
+.minus {
+   padding: 4px;
+   cursor: pointer;
+}
+
+.roomType {
+   width: 130px;
+   line-height: 1.5;
+}
+
+.type1 {
+   color: #777;
+}
+
+.type3 {
+   font-size: 12px;
+}
+
+.period, .adult, .child, .infant, .pay {
+   width: 150px;
+   text-align: center;
+}
+
+.child>p, .infant>p {
+   width: 80px;
+   background-color: rgb(229, 229, 229);
+   color: rgb(158, 158, 158);
+   margin: 0 auto;
+}
+
+.resultTable {
+   display: flex;
+   justify-content: center;
+}
+
+.resultTable>table {
+   border: 1px solid rgb(229, 229, 229);
+   border-collapse: collapse; /*테두리 사이의 간격을 없애줌*/
+}
+.resultTable>thead>tr>th {
+   padding:10px;
+}
+.roomTitleTh>th {
+   background-color: rgb(243, 243, 243);
+   font-weight: normal;
+   height: 40px;
+   padding: 0 40px;
+}
+
+.resultTable tbody>tr>th, .resultTable tbody>tr>td {
+   border: 1px solid #e2d2d2; /*표 테두리 색 */
+   font-weight: normal;
+   height: 40px;
+}
+
+.resultList tr, .resultList td {
+   text-align: center;
+   height: 40px;
+}
+
+
+.reservedDoNotReserve {
+   display: none;
+}
+
+/*reservationcheck page reservationcheck page*/
+.PersonalData {
+   margin: 100px auto;
+   width: 330px;
+   height: 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.resultTable th {
+   background-color: rgb(243, 243, 243);
+   font-weight: normal;
+   height: 40px;
+   padding: 10px 30px;
+}
+
+ .resultTable thead>tr>th, .resultTable tbody>tr>td {
+   border: 1px solid #e2d2d2; /*표 테두리 색 */
+   font-weight: normal;
+   height: 40px;
+}
+
+.dataName>span, .dataPhone>span {
+   float: left;
+   margin: 5px;
+   font-size: 18px;
+   font-weight: bold;
+   color: rgb(158, 146, 131);
+}
+
+.dataName>input, .dataPhone>input {
+   float: right;
+   margin: 5px;
+   font-size: 18px;
+}
+
+
+.resultList tr td {
+   text-align: center;
+   height: 40px;
+}
+
+.requestMsg>p {
+   font-size: 14px;
+   color: #ccc;
+   display: none;
+}
+
+.requestMsg:hover p {
+   display: block;
+   width: 300px;
+   padding: 14px 0;
+   background-color: rgba(0, 0, 0, 0.8);
+   border: 1px solid black;
+   border-radius: 5px;
+   z-index: 9999;
+   text-align: center;
+   line-height: 28px;
+}
+
+.tableHeadLine, .resultTitle, .resultTitle>th, .resultList>tr>td {
+   border: 1px solid #e2d2d2;
+}
+
+.dataPhone {
+   margin-bottom: 20px;
+}
+
+#reserveCheck {
+   padding: 5px;
+   cursor: pointer;
+   background-color: #9e9283;
+   color: #fff;
+   border:none;
+   margin: 10px 150px;
+   width: 80px;
+}
+
+.resultList {
+   text-align: center;
+}
+
+.resultTitle>th {
+   font-weight: bold;
+   color: rgb(158, 146, 131);
+}
+
+/*addService addService addService addService*/
+.reserveContents section>h2 {
+   padding-bottom: 20px;
+}
+
+.addService {
+}
+
+.addServiceTitle {
+   padding: 20px;
+}
+
+.addSelectTable {
+   border-top: 0;
+}
+
+.addTitle {
+   max-width: 1200px;
+}
+.addTitle>th{
+   border-bottom:1px solid #e2d2d2;
+}
+
+.addName {
+   width: 200px;
+   border:none;
+   padding:10px;
+}
+
+.addInfo {
+   width: 800px;
+   border:none;
+}
+
+.addPrice, .addNo {
+   width: 100px;
+   border:none;
+}
+
+
+#add>td {
+   text-align: center;
+   border-bottom: 1px solid #e2d2d2;
+   border-top: 0;
+   border-right: 0;
+}
+
+#add>td:nth-child(1) {
+   border-left: 0;
+}
+
+#add>td:nth-child(2) {
+   text-align: left;
+   padding-left: 20px;
+}
+
+.memberInfo {
+   max-width: 1200px;
+}
+
+.memberInfo>h2 {
+   padding-left: 10px;
+}
+
+.memberTitle {
+   width: 200px;
+   float: left;
+}
+
+.memberTitle>p {
+   padding: 10px;
+}
+
+.etcHeight {
+   height: 180px;
+}
+
+.memberAnswer {
+   max-width: 1000px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.memberAnswer input, .memberAnswer select, .memberAnswer textarea {
+  outline: none;
+  border: 1px solid rgba(64,64,64,0.4);
+  padding: 10px
+}
+.memberAnswer input:focus, .memberAnswer select:focus, .memberAnswer textarea:focus {
+  border: 2px solid #9e9283;
+}
+.name, .phone, .arrive, .howToKnow {
+   width: 200px;
+   margin: 10px;
+}
+
+.request {
+   margin: 10px;
+   width: 40vw;
+}
+
+.addInfoDetail>p {
+   line-height: 2;
+}
+/*termsAgree termsAgree termsAgree termsAgree*/
+.termsAgree {
+   max-width: 1200px;
+}
+
+.termsAgree>h2 {
+   padding-left: 10px;
+}
+
+.termsAgree>h2>span {
+   float: right;
+   font-size: 18px;
+   margin: 10px;
+   
+}
+.termsAgree>h2>span>input,
+.agreeSubmenu>ul>span>input  {
+    cursor: pointer;
+}
+
+.agreeTitle {
+   padding: 10px;
+   border-bottom: 1px solid #e2d2d2;
+   font-weight: bolder;
+}
+
+
+.agreeTitle>span {
+   float: right;
+}
+
+.moreDetail {
+   padding: 10px;
+   /* display: none; */
+}
+
+.moreDetail>P {
+   line-height: 1.5;
+   font-weight: lighter;
+}
+
+/*cash cash cash cash */
+.payment {
+   max-width: 1200px;
+}
+
+.cashNav {
+   padding-left: 10px;
+}
+
+.cashNav>h2 {
+   margin: 10px;
+}
+
+.selectSum {
+   max-width: 1200px;
+      width: 100%;
+   border-top: none;
+}
+
+.plusPay {
+   border:none;
+}
+
+.selectList {
+   font-weight: bold;
+   font-size: 20px;
+   padding: 10px;
+   display: flex;
+   justify-content: space-around;
+   border: none;
+   margin: 0 auto;
+}
+
+.selectList>th:nth-child(2n-1) {
+   background-color: inherit;
+   border: none;
+   text-align: center;
+   width: 19%;
+}
+#selectList>th:nth-child(2n) {
+   width:6%;
+}
+.selectPay>tr {
+   font-size: 20px;
+   padding: 10px;
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+   margin: 0 auto;
+}
+
+#payList, #payList>td {
+   border: none;
+}
+
+#payList>td:nth-child(2n-1) {
+   width: 19%;
+}
+#payList>td:nth-child(2n) {
+   width:6%;
+}
+
+.ttlPay, .won>i {
+   color: rgb(158, 146, 131);
+   font-weight: bold;
+}
+
+.payAccount {
+   max-width: 1200px;
+   text-align: center;
+   margin: 20px;
+}
+
+.payAccount>p {
+   line-height: 2;
+}
+
+.payAccount>input, #account {
+   padding: 5px;
+   width: 300px;
+   margin: 30px auto;
+}
+
+.lastPayment {
+   margin: 50px auto;
+   display: flex;
+   justify-content: center;
+   padding: 5px;
+   background-color:#9e9283;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   cursor: pointer;
+}
+
+/*모바일 + 공통*/
+@media screen and (max-width: 570px) {
+   #wrap {
+      margin: 0 auto;
+   }
+   /*reservation*/
+   /* calendar calender calendar */
+   .reservationCheck {
+      display: none;
+   }
+   main {
+      padding: 100px 0;
+      margin: 0 auto;
+      max-width: 570px;
+   }
+   .yearMonth {
+      max-width: 570px;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .selectDay .dates>.weeks>td {
+      height: 60px;
+      text-align: center;
+      vertical-align: middle;
+   }
+   .weeks>td.selectable {
+      cursor: pointer;
+   }
+   .weeks>td.selected {
+      border: 1px solid #000;
+   }
+   #contents {
+      
+   }
+   .left, .right {
+      width: 30px;
+      height: 30px;
+   }
+   .yearMonth>.contentsTitle {
+      padding: 12px 15px 0 15px;
+      font-size: 30px;
+      color: #333;
+      border-bottom: 0;
+      margin-bottom: 0;
+      text-align: center;
+   }
+   .stationInfo {
+      display: flex;
+      justify-content: space-around;
+      max-width: 570px;
+   }
+   .station {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+   }
+   .station>li {
+      line-height: 20px;
+      font-size: 15px;
+      margin: 10px;
+      line-height: 15px;
+      align-items: center;
+   }
+   .station>li>img {
+      width: 20px;
+      height: 20px;
+      vertical-align: text-bottom;
+   }
+   .monthChange {
+      cursor: pointer;
+   }
+   .weeks, .dayBox {
+      
+   }
+   .gone {
+      
+   }
+   .showPay>p {
+      cursor: pointer;
+   }
+   .showPay>p {
+      border: 1px solid rgb(229, 229, 229);
+      padding: 5px;
+   }
+   #calender {
+      max-width: 1200px;
+      height: auto;
+      margin: 0 auto;
+   }
+   .dayBox {
+      
+   }
+   .date {
+      color: #777;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+   }
+   .calendarTable {
+      border: 1px solid rgb(229, 229, 229);
+      max-width: 1200px;
+   }
+   .weeksTitle {
+      border: 1px solid rgb(229, 229, 229);
+   }
+   .room {
+      padding: 7px 0 3px;
+   }
+   .gone {
+      color: #aaa;
+   }
+   .room>a {
+      
+   }
+   .sun {
+      color: red;
+   }
+   .sat {
+      color: skyblue;
+   }
+   .calendarTable>thead {
+      
+   }
+   .calendarTable td {
+      width: 0.2vw;
+   }
+   .weeksTitle>th {
+      width: 200px;
+      padding: 10px 0;
+   }
+
+   .weeks>td {
+      padding: 10px;
+      vertical-align: top;
+   }
+   .enable>img, .disable>img {
+      width: 20px;
+      height: 20px;
+      vertical-align: text-bottom;
+   }
+   .disable {
+      color: #aaa;
+   }
+   .disable .reserver {
+      font-size: 14px;
+      color: #ccc;
+      display: none;
+   }
+   .disable:hover .reserver {
+      display: block;
+      width: 160px;
+      height: 28px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 1px solid black;
+      border-radius: 5px;
+      z-index: 9999;
+      text-align: center;
+      line-height: 28px;
+   }
+   .roomValue {
+      font-size: 13px;
+      display: none;
+   }
+
+   /* reservation reservation reservation */
+   .selectDay {
+      overflow: auto;
+      max-width: 570px;
+      height: auto;
+   }
+   .selectCalendar {
+      max-width: 100%;
+      float: left;
+   }
+   .selectInfo {
+      max-width: 100%;
+      padding: 20px;
+      line-height: 1.8;
+   }
+   .selectNotice {
+      display: none;
+      max-width: 570px;
+      float: right;   
+      line-height: 1.8;
+   }
+   .viewMore {
+      width: 70px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid rgb(229, 229, 229);
+      cursor: pointer;
+      float: right;
+      text-align: center;
+   }
+   .viewStop {
+      width: 60px;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid rgb(229, 229, 229);
+      cursor: pointer;
+      display: none;
+      float: right;
+      text-align: center;
+   }
+   .roomSelect {
+   max-width:570px;
+   }
+   .ageStandard {
+      float: right;
+   }
+   .ageStandard>span {
+      font-weight: normal;
+      font-size:12px;
+   }
+   
+   .roomSelectTable {
+      max-width:570px;
+
+   }
+   .roomTitleTh, .roomTitle {
+      width:100%;
+   }
+   .selectTh {
+      text-align: center;
+   }
+   .roomImg {
+      width: 25%;
+   }
+   .roomImg>img {
+      width: 70px;
+      height: 70px;
+   }
+   .plus {
+      padding: 2px;
+      cursor: pointer;
+   }
+   .minus {
+      padding: 4px;
+      cursor: pointer;
+   }
+   .roomType {
+      width: 30%;
+      line-height: 1.5;
+   }
+   .type1 {
+      color: #777;
+   }
+   .type3 {
+      font-size: 12px;
+   }
+   .periodTh, .adultTh, .childTh, .infantTh {
+      width:10%;
+      text-align: center;
+   }
+   .childTh>p, .infantTh>p {
+      width: 10px;
+      background-color: rgb(229, 229, 229);
+      color: rgb(158, 158, 158);
+      margin: 0 auto;
+   }
+   .payTh {
+      width: 20%;
+      text-align: center;
+   }
+.period, .adult, .child, .infant {
+   width:14px;
+} 
+.child>p, .infant>p {
+   width:14px;
+}
+   /*reservationcheck page reservationcheck page*/
+   .PersonalData {
+      margin: 100px auto;
+      width: 330px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   .dataName>span, .dataPhone>span {
+      float: left;
+      margin: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(158, 146, 131);
+   }
+   .dataName>input, .dataPhone>input {
+      float: right;
+      margin: 5px;
+      font-size: 18px;
+   }
+   #reserveCheck {
+      padding: 5px;
+      margin: 10px 150px;
+      width: 80px;
+   }
+   .resultList tr td {
+      text-align: center;
+      height: 40px;
+   }
+   .requestMsg>p {
+      font-size: 14px;
+      color: #ccc;
+      display: none;
+   }
+   .requestMsg:hover p {
+      display: block;
+      width: 300px;
+      padding: 14px 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 1px solid black;
+      border-radius: 5px;
+      z-index: 9999;
+      text-align: center;
+      line-height: 28px;
+   }
+
+   /* reservation chk chk chk chk chk chk chk new */
+   .tableHeadLine, .resultTitle, .resultTitle>th, .resultList>tr>td {
+      border: 1px solid #e2d2d2;
+   }
+   .dataPhone {
+      margin-bottom: 20px;
+   }
+   #reserveCheck {
+      padding: 5px;
+      cursor: pointer;
+      background-color: #9e9283;
+      border: none;
+      color: #fff;
+   }
+   .resultList {
+      text-align: center;
+   }
+   .resultTitle>th {
+      font-weight: bold;
+      color: rgb(158, 146, 131);
+   }
+   
+   .roomTitleTh>th {
+   height: auto;
+   padding:0;
+   }
+
+   .roomTitleTh tr, .roomTitleTh td, .roomSelectTable {
+      border: 1px solid #e2d2d2;
+      border-right: 1px solid #e2d2d2;
+   }
+   .reservedDoNotReserve {
+      display: none;
+   }
+
+   /*addService addService addService addService*/
+   .reserveContents section>h2 {
+      padding-bottom: 20px;
+   }
+   .addService {
+      max-width: 570px;
+   }
+   .addServiceTitle {
+      padding: 20px;
+   }
+   .addTitle {
+      max-width: 570px;
+   }
+   .addName {
+      width: 120px;
+   }
+   .addInfo {
+      width: 320px;
+   }
+   .addPrice, .addNo {
+      width: 65px;
+   }
+   
+
+   #add>td {
+      text-align: center;
+      border-bottom: 1px solid #e2d2d2;
+      border-top: 0;
+      border-right: 0;
+   }
+   #add>td:nth-child(1) {
+      border-left: 0;
+   }
+   #add>td:nth-child(2) {
+      text-align: left;
+      padding-left: 20px;
+   }
+   .memberInfo {
+      max-width: 570px;
+   }
+   .memberTitle {
+      width: 200px;
+      float: left;
+   }
+   .memberTitle>p {
+      padding: 10px;
+   }
+   .etcHeight {
+      height: 180px;
+   }
+   .memberAnswer {
+      max-width: 570px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   .a1, .a2, .a3, .a4 {
+      width: 200px;
+      margin: 10px;
+   }
+   #idEtc {
+      margin: 10px;
+      width: 50vw;
+   }
+   .addInfoDetail>p {
+      line-height: 2;
+   }
+
+   /*termsAgree termsAgree termsAgree termsAgree*/
+   .termsAgree {
+      max-width: 570px;
+   }
+   .termsAgree>h2>span {
+      float: right;
+      font-size: 18px;
+      margin: 10px;
+   }
+   .agreeTitle {
+      padding: 10px;
+      border-bottom: 1px solid #e2d2d2;
+   }
+   .agreeTitle>span {
+      float: right;
+   }
+   .moreDetail {
+      padding: 10px;
+      /* display: none; */
+   }
+   .moreDetail>P {
+      line-height: 1.5;
+   }
+
+   /*cash cash cash cash */
+   .payment {
+      max-width: 570px;
+   }
+   .cashNav>h2 {
+      padding: 10px 0;
+      margin-bottom: 10px;
+   }
+   .selectSum {
+      max-width:570px;
+   }
+   .selectList {
+      font-weight: bold;
+      font-size: 15px;
+      padding: 5px;
+      display: flex;
+      justify-content: space-around;
+      border: none;
+      margin: 0 auto;
+   }
+   .selectList>th {
+      background-color: inherit;
+      border: none;
+      text-align: center;
+      
+   }
+   .selectList>th:last-child {
+      background-color: inherit;
+      border: none;
+      text-align: center;
+      
+   }
+   .selectList>th:nth-child(2n) {
+      background-color: inherit;
+      border: none;
+      text-align: center;
+      
+   }
+   .selectPay {
+      
+   }
+   .selectPay>tr {
+      font-size: 16px;
+      padding: 5px;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin: 0 auto;
+   }
+   .plusPay {
+      
+   }
+   #payList, #payList>td {
+      border: none;
+   }
+
+   #payList>td:last-child {
+      
+      text-align: center;
+   }
+   .ttlPay, .won>i {
+      color: rgb(158, 146, 131);
+      font-weight: bold;
+   }
+   .payAccount {
+      max-width: 570px;
+      text-align: center;
+      margin: 20px;
+   }
+   .payAccount>p {
+      line-height: 2;
+   }
+   .payAccount>input, #account {
+      padding: 5px;
+      width: 300px;
+      margin: 30px auto;
+   }
+   .lastPayment {
+      margin: 50px auto;
+   }
+   .enable {
+      font-size: 10px;
+   }
+}
